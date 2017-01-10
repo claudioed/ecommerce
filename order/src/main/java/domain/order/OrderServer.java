@@ -1,4 +1,4 @@
-package domain.product;
+package domain.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.health.Health;
@@ -13,10 +13,10 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @SpringCloudApplication
 @EnableZuulProxy
 @EnableHystrix
-public class ProductServer implements HealthIndicator {
+public class OrderServer implements HealthIndicator{
 
     public static void main(String[] args) {
-        SpringApplication.run(ProductServer.class, args);
+        SpringApplication.run(OrderServer.class, args);
     }
 
     @Override
