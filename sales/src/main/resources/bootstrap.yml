@@ -1,3 +1,7 @@
 spring:
   application:
     name: sales
+
+  data:
+    mongodb:
+      host: localhost
