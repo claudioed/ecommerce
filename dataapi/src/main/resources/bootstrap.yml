@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: dataapi
+
+  data:
+    mongodb:
+      host: localhost

@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 /**
- * @author Claudio E. de Oliveira<claudioe@ciandt.com>
+ * @author Claudio E. de Oliveira<claudioed.oliveira@gmail.com>
  */
 @RepositoryRestResource(collectionResourceRel = "orders",path = "order")
 public interface OrderResource extends MongoRepository<Order,String>{}

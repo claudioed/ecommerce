@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import java.util.List;
 
 /**
- * @author Claudio E. de Oliveira<claudioe@ciandt.com>
+ * @author Claudio E. de Oliveira<claudioed.oliveira@gmail.com>
  */
 @Data
 public class Order {
