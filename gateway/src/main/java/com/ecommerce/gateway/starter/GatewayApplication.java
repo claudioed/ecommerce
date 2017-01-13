@@ -1,4 +1,4 @@
-package com.ecommerce.gatway.starter;
+package com.ecommerce.gateway.starter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;

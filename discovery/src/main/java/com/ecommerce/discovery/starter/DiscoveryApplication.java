@@ -1,4 +1,4 @@
-package com.eccommerce.discovery.starter;
+package com.ecommerce.discovery.starter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
