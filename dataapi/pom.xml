@@ -11,6 +11,12 @@
 
     <artifactId>data-api</artifactId>
 
+    <properties>
+        <spring-boot-plugin.version>1.4.3.RELEASE</spring-boot-plugin.version>
+        <docker.image.prefix>ecommerce</docker.image.prefix>
+        <docker.plugin.version>0.4.13</docker.plugin.version>
+    </properties>
+
     <dependencies>
 
         <dependency>
@@ -19,5 +25,50 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <finalName>data-api</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot-plugin.version}</version>
+                <configuration>
+                    <mainClass>domain.data.DataServer</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>${docker.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <imageName>${docker.image.prefix}/dataapi</imageName>
+                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

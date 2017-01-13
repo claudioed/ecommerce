@@ -3,5 +3,5 @@ MAINTAINER Claudio de Oliveira<claudioed.oliveira@gmail.com>
 VOLUME /tmp
 ADD discovery.jar discovery.jar
 RUN bash -c 'touch /discovery.jar'
-EXPOSE 8001
+EXPOSE 8761
 ENTRYPOINT ["java","-Dspring.profiles.active=default","-jar","/discovery.jar"]
