@@ -16,6 +16,7 @@
     </properties>
 
     <artifactId>gateway</artifactId>
+
     <dependencies>
 
         <dependency>

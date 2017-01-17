@@ -1,2 +1,32 @@
 version: '2'
 services:
+
+  config:
+    restart: always
+    image: ecommerce/config
+    network_mode: "host"
+    ports:
+     - "8001:8001"
+
+  gateway:
+    restart: always
+    network_mode: "host"
+    image: ecommerce/gateway
+    ports:
+     - "8888:8888"
+
+  discovery:
+    restart: always
+    network_mode: "host"
+    image: ecommerce/discovery
+    ports:
+     - "8761:8761"
+
+  product:
+    restart: always
+    network_mode: "host"
+    image: ecommerce/product
+    ports:
+     - "8045"
+
+
