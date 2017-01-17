@@ -29,4 +29,18 @@ services:
     ports:
      - "8045"
 
+  sales:
+    restart: always
+    network_mode: "host"
+    image: ecommerce/sales
+    ports:
+     - "8046"
+
+  order:
+    restart: always
+    network_mode: "host"
+    image: ecommerce/order
+    ports:
+     - "8047"
+
 
