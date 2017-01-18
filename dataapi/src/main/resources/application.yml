@@ -1,0 +1,7 @@
+hosts:
+  order:
+    address: order
+  product:
+    address: product
+  sales:
+    address: sales
