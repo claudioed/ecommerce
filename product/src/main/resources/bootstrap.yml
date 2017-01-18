@@ -2,9 +2,6 @@ spring:
   application:
     name: product
 
-  data:
-    mongodb:
-      host: localhost
-
-server:
-  port: 8045
+  cloud:
+    config:
+      uri: http://localhost:8001/

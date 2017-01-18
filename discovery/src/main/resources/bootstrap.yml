@@ -1,6 +1,7 @@
 spring:
   application:
-    name: sales
+    name: discovery
+
   cloud:
     config:
       uri: http://localhost:8001/

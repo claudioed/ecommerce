@@ -2,6 +2,7 @@ spring:
   application:
     name: dataapi
 
-  data:
-    mongodb:
-      host: localhost
+  cloud:
+    config:
+      uri: http://localhost:8001/
+
